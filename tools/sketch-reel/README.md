@@ -28,3 +28,10 @@ config에 `stages`가 있으면 단계별 교차 전환 영상을 만든다 (길
 ```
 - 상단에 `STEP n / N` 표시, 전체가 아주 느리게 줌인
 - 모든 단계 이미지는 같은 구도여야 한다 (앞 단계를 넣고 편집하는 연쇄 편집으로 만든다)
+
+## ask 모드 — 이렇게 요청하세요 (`formats/request-reel.md`, 현재 주력)
+```json
+{"before": "before.png", "after": "after.png",
+ "captions": {"before": "이런 밋밋한 붙박이장을", "after": "이렇게 꾸미려면?", "ask_title": "업체에 이렇게 요청하세요 👇"},
+ "ask": ["요청 1", "요청 2", "요청 3"], "warn": "⚠️ 주의점", "out": "ask.mp4"}
+```
