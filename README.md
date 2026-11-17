@@ -16,6 +16,7 @@
 | Agent 조직 9명 | ✅ | `agents/` |
 | 검수표·게시 전 체크·비포 촬영 계획 | ✅ | `checklists/` |
 | 기록 → 비축 → 대기열 흐름 | ✅ | `records/`, `queue.md` |
+| 지식 DB 구조 (13개 도메인) | ✅ 구조 / ⬜ 내용 축적 | `knowledge/` |
 | 계정 개설·보안 설정 | ⬜ CEO 실행 | `checklists/account-setup.md` |
 | 주간 루틴 예약 (기록관·리서처·편집장) | ⬜ | — |
 | 캐릭터 확정·포즈 세트·캐러셀 템플릿 | ⏸ 보류 (v4 초안까지) | `brand/characters/` |
