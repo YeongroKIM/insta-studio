@@ -172,6 +172,19 @@ window.render=(t)=>{{
 </script></body></html>"""
     return html, dur
 
+# 브랜드 서체 (BRAND.md 5절, 2026-11-17 CEO 선택: 타이틀 고운바탕 · 설명 고운돋움 · 강조 나눔손글씨 펜)
+FONT_LINK = '<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Gowun+Dodum&family=Nanum+Pen+Script&display=swap" rel="stylesheet">'
+FONT_CSS = """
+body{word-break:keep-all;overflow-wrap:break-word}
+#cap,#tag,#step,#panel h2{font-family:'Gowun Batang',serif!important;font-weight:700!important;text-wrap:balance;letter-spacing:-1px}
+#panel li,#card,#cta,#ai{font-family:'Gowun Dodum',sans-serif!important;font-weight:400!important;text-wrap:balance;letter-spacing:-0.5px}
+#panel .warn{font-family:'Nanum Pen Script',cursive!important;font-weight:400!important;font-size:70px!important;line-height:1.1!important;text-wrap:balance}
+"""
+
+def brand_fonts(html: str) -> str:
+    html = html.replace('<meta charset="utf-8">', '<meta charset="utf-8">' + FONT_LINK, 1)
+    return html.replace("</style></head>", FONT_CSS + "</style></head>", 1)
+
 SHOT_JS = r"""
 const { chromium } = require('playwright');
 (async () => {
@@ -204,7 +217,7 @@ def main():
         html, dur = build_html(cfg, base), cfg.get("duration", 10)
     with tempfile.TemporaryDirectory() as td:
         td = pathlib.Path(td)
-        (td / "reel.html").write_text(html, encoding="utf-8")
+        (td / "reel.html").write_text(brand_fonts(html), encoding="utf-8")
         (td / "shot.js").write_text(SHOT_JS, encoding="utf-8")
         frames = td / "frames"; frames.mkdir()
         only = (",".join(f"{x:.2f}" for x in [0.5, dur*0.35, dur*0.7, dur-0.5])) if preview else ""
