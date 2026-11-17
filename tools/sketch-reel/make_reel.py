@@ -183,9 +183,12 @@ body{word-break:keep-all;overflow-wrap:break-word}
 #panel .warn{font-family:'Nanum Pen Script',cursive!important;font-weight:400!important;font-size:70px!important;line-height:1.1!important;text-wrap:balance}
 """
 
-def brand_fonts(html: str) -> str:
+def brand_fonts(html: str, ai_badge: bool = False) -> str:
+    """브랜드 서체 적용. 영상 속 'AI 시뮬레이션' 글자는 기본 숨김 —
+    대신 업로드 시 인스타 'AI 정보' 표시를 켠다 (checklists/pre-publish.md 4번)."""
     html = html.replace('<meta charset="utf-8">', '<meta charset="utf-8">' + FONT_LINK, 1)
-    return html.replace("</style></head>", FONT_CSS + "</style></head>", 1)
+    css = FONT_CSS + ("" if ai_badge else "#ai{display:none!important}\n")
+    return html.replace("</style></head>", css + "</style></head>", 1)
 
 SHOT_JS = r"""
 const { chromium } = require('playwright');
@@ -219,7 +222,7 @@ def main():
         html, dur = build_html(cfg, base), cfg.get("duration", 10)
     with tempfile.TemporaryDirectory() as td:
         td = pathlib.Path(td)
-        (td / "reel.html").write_text(brand_fonts(html), encoding="utf-8")
+        (td / "reel.html").write_text(brand_fonts(html, cfg.get("ai_badge", False)), encoding="utf-8")
         (td / "shot.js").write_text(SHOT_JS, encoding="utf-8")
         frames = td / "frames"; frames.mkdir()
         only = (",".join(f"{x:.2f}" for x in [0.5, dur*0.35, dur*0.7, dur-0.5])) if preview else ""
@@ -230,7 +233,7 @@ def main():
             print("preview →", out.parent)
             return
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-framerate", str(FPS), "-i", str(frames / "f_%04d.png"),
-                        "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "16", "-preset", "slow", "-movflags", "+faststart", str(out)], check=True)
+                        "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "16", "-preset", "medium", "-movflags", "+faststart", str(out)], check=True)
         print("reel →", out)
 
 if __name__ == "__main__":
