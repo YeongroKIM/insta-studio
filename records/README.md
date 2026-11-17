@@ -10,9 +10,12 @@
 | 메모·생각·결정 | `records/inbox/` | 한 줄이어도 OK. 형식 없음. 아무렇게나 |
 | 견적·예산 | 원본은 클라우드, 숫자는 inbox 메모로 | 기록관이 범위로 바꿔 정리 |
 
-`records/inbox/` 사용법은 둘 중 편한 쪽으로:
-- **폰 Obsidian**: 이 저장소를 두 번째 vault로 열고 Obsidian Git으로 동기화 (개인 vault와는 분리)
-- **Claude에게 말하기**: "오늘 바닥재 견본 봤는데 B가 나았음" 식으로 보내면 inbox에 대신 적는다
+`records/inbox/` 사용법: **폰 Obsidian 두 번째 vault** (확정, 개인 vault와 분리)
+- 새 노트를 만들면 자동으로 `records/inbox/`에 생긴다 (`.obsidian/app.json` 설정)
+- 제목·형식 없이 아무렇게나. 하루 메모 한 파일이든 생각 하나당 한 파일이든 상관없다
+- **사진은 Obsidian에 붙여넣지 말고 클라우드 앨범으로.** 실수로 붙여넣어도 `_attachments/`에
+  저장되고 `.gitignore`로 저장소에는 올라가지 않는다 (그 기기에만 남는다)
+- 급할 땐 Claude에게 채팅으로 보내도 된다 (기록관이 inbox에 받아 적는다)
 
 inbox 메모 예시 (아무렇게나 써도 된다):
 ```

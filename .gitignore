@@ -1,0 +1,18 @@
+# Obsidian: 기기별 화면 상태·휴지통은 동기화하지 않는다
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.trash/
+
+# 원본 사진·영상은 저장소에 올리지 않는다 (CLAUDE.md 최우선 규칙 4 — 클라우드 앨범 사용)
+records/inbox/_attachments/
+records/**/*.jpg
+records/**/*.jpeg
+records/**/*.png
+records/**/*.heic
+records/**/*.gif
+records/**/*.mov
+records/**/*.mp4
+records/**/*.pdf
+
+.DS_Store
