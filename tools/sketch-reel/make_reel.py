@@ -76,6 +76,47 @@ window.render = (t)=>{{
 }};
 </script></body></html>"""
 
+def build_stages_html(cfg, base: pathlib.Path) -> tuple[str, float]:
+    """빈집 채우기 모드: stages=[{image, caption}] 를 차례로 교차 전환. (formats/build-up-reel.md)"""
+    st = cfg["stages"]
+    hold, fade, tail = cfg.get("hold", 1.5), cfg.get("fade", 0.6), cfg.get("tail", 2.2)
+    dur = len(st) * hold + (len(st) - 1) * fade + tail
+    layers = "".join(
+        f'<div class="layer" id="L{i}" style="background-image:url(\'{(base / s["image"]).resolve().as_uri()}\');opacity:{1 if i == 0 else 0}"></div>'
+        for i, s in enumerate(st))
+    caps = json.dumps([s["caption"] for s in st], ensure_ascii=False)
+    info = cfg.get("info", "")
+    html = f"""<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&display=swap" rel="stylesheet">
+<style>
+*{{margin:0;padding:0;box-sizing:border-box}}
+body{{width:{W}px;height:{H}px;overflow:hidden;background:#000;font-family:'Gaegu',cursive}}
+#stage{{position:absolute;inset:0;transform-origin:50% 55%}}
+.layer{{position:absolute;inset:0;background-size:cover;background-position:center}}
+#shade{{position:absolute;left:0;right:0;top:0;height:520px;background:linear-gradient(rgba(40,30,22,.42),rgba(40,30,22,0))}}
+#cap{{position:absolute;top:150px;width:100%;text-align:center;font-size:76px;color:#fff;text-shadow:0 3px 14px rgba(0,0,0,.45);padding:0 60px}}
+#step{{position:absolute;top:96px;width:100%;text-align:center;font-family:sans-serif;font-size:30px;letter-spacing:4px;color:rgba(255,255,255,.85)}}
+#card{{position:absolute;left:60px;right:60px;bottom:230px;background:rgba(250,247,242,.93);border-radius:36px;padding:44px 48px;font-size:54px;color:#2F2A27;line-height:1.35;opacity:0}}
+#card .cta{{margin-top:22px;font-size:50px;color:#8A5A3C}}
+#ai{{position:absolute;right:36px;bottom:120px;font-family:sans-serif;font-size:28px;color:rgba(255,255,255,.85);background:rgba(0,0,0,.28);padding:8px 16px;border-radius:12px}}
+</style></head><body>
+<div id="stage">{layers}</div><div id="shade"></div><div id="step"></div><div id="cap"></div>
+<div id="card">{info}<div class="cta">🐿️ 예랑이한테 보내기 · 🌰 저장</div></div><div id="ai">AI 시뮬레이션</div>
+<script>
+const CAPS={caps}, N=CAPS.length, HOLD={hold}, FADE={fade};
+const cl=(v,a,b)=>Math.min(1,Math.max(0,(v-a)/(b-a))); const ease=t=>t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;
+window.render=(t)=>{{
+  stage.style.transform=`scale(${{1+0.08*cl(t,0,{dur})}})`;
+  let cur=0;
+  for(let i=1;i<N;i++){{ const s=i*HOLD+(i-1)*FADE; const k=ease(cl(t,s,s+FADE));
+    document.getElementById('L'+i).style.opacity=k; if(t>=s+FADE*0.5) cur=i; }}
+  cap.textContent=CAPS[cur]; step.textContent=cur===0?'':`STEP ${{cur}} / ${{N-1}}`;
+  const end=N*HOLD+(N-1)*FADE, k=ease(cl(t,end-0.2,end+0.4));
+  card.style.opacity=k; card.style.transform=`translateY(${{(1-k)*60}}px)`;
+}};
+</script></body></html>"""
+    return html, dur
+
 SHOT_JS = r"""
 const { chromium } = require('playwright');
 (async () => {
@@ -100,13 +141,16 @@ def main():
     cfg = json.loads(cfg_path.read_text(encoding="utf-8"))
     base = cfg_path.parent
     out = (base / cfg.get("out", cfg_path.stem + ".mp4")).resolve()
-    dur = cfg.get("duration", 10)
+    if "stages" in cfg:
+        html, dur = build_stages_html(cfg, base)
+    else:
+        html, dur = build_html(cfg, base), cfg.get("duration", 10)
     with tempfile.TemporaryDirectory() as td:
         td = pathlib.Path(td)
-        (td / "reel.html").write_text(build_html(cfg, base), encoding="utf-8")
+        (td / "reel.html").write_text(html, encoding="utf-8")
         (td / "shot.js").write_text(SHOT_JS, encoding="utf-8")
         frames = td / "frames"; frames.mkdir()
-        only = "0.5,3,6,9" if preview else ""
+        only = (",".join(f"{x:.2f}" for x in [0.5, dur*0.35, dur*0.7, dur-0.5])) if preview else ""
         subprocess.run(["node", str(td / "shot.js"), str(td / "reel.html"), str(frames), str(dur), str(FPS), only], check=True)
         if preview:
             for i, f in enumerate(sorted(frames.glob("*.png"))):
