@@ -1,6 +1,7 @@
 # 이렇게 요청하세요 — 1차 배치 (공간 6종)
 
-> 상태: **준비 완료, 크레딧 대기** (필요 약 33 크레딧 = 6편 × 2장 × 2.75, high 2k). 근거: 지식 DB `knowledge/domains/10-interior.md`.
+> 상태: **02 주방·03 거실 제작 완료 (2026-11-17, medium 2k, 4 크레딧)** · 04~07 크레딧 대기.
+> 원래 상태: 준비 완료, 크레딧 대기 (필요 약 33 크레딧 = 6편 × 2장 × 2.75, high 2k). 근거: 지식 DB `knowledge/domains/10-interior.md`.
 > 생성 → `tools/sketch-reel/work/<id>/before.png·after.png` 저장 → `python3 tools/sketch-reel/make_reel.py tools/sketch-reel/jobs/<id>.json`
 
 공통: 모델 `gpt_image_2_6`, quality high, 2k, 9:16. Before는 생성, After는 Before job을 `image_references`로 넣고 편집.
