@@ -43,3 +43,9 @@
 | 32 | 본식 날 챙길 것 (신부 파우치) | 리스트 | 캐러셀 | 체크리스트 저장형 | 소품 플랫레이 | 하 | 결혼식 전 제작 |
 | 33 | 웨딩 후회템 vs 잘한템 | 리스트 | 릴스 | 결론형, 공유율 높음 | 소품 | 하 | 결혼식 후 제작 |
 | 34 | 웨딩홀, 투어 안 하고 정했어요 (대학교 예식장이 맞는 사람) | 결혼식 | 캐러셀 | 실제 경험 + "고민 끝" 약속에 딱 맞음. 15번(투어 비교표)은 투어 경험이 없어 보류 | 기록 2026-11-17 | 중 (과CC·학교 단서 금지) | 런칭일 no.02 |
+| 35 | 박람회에서 계약했어도, 14일 안이면 되돌릴 수 있어요 | 결혼식 | 캐러셀 | 📚 정보형 · knowledge/domains/02 | 텍스트 위주 (손·계약서 소품, 업체명 없음) | 하 | 구상 완료 (ideas/concepts/2026-11-17-fair-contract-14day-cancel.md) |
+| 36 | "무료 플래너"가 무료인 이유 | 돈 | 릴스 | 📚 정보형 · knowledge/domains/02 | 손·소품·텍스트 컷 (부스·로고 금지) | 하 | 구상 완료 (ideas/concepts/2026-11-17-free-planner-why.md) |
+| 37 | 플래너 계약 전, 이 7가지만 물어보세요 (도토리 리스트) | 리스트 | 캐러셀 | 📚 정보형 · knowledge/domains/02 | 텍스트 위주 | 하 | 구상 완료 (ideas/concepts/2026-11-17-planner-contract-7-questions.md) |
+| 38 | 스드메 추가금 1편 — 스튜디오·드레스 | 결혼식 | 캐러셀 | 📚 정보형 · knowledge/domains/03 | 항목별 중간가 표 · 드레스 디테일 사진 | 하 | 구상 완료 (ideas/concepts/2026-11-17-sdm-extra-fees-1-studio-dress.md) |
+| 39 | 스드메 추가금 2편 — 새벽 메이크업 시간대별 추가금 | 결혼식 | 릴스 | 📚 정보형 · knowledge/domains/03 | 손·시계·메이크업 소품 컷 | 하 | 구상 완료 (ideas/concepts/2026-11-17-sdm-extra-fees-2-early-makeup.md) |
+| 40 | 스드메, '계약가' 말고 '총액'으로 비교하세요 | 돈 | 캐러셀 | 📚 정보형 · knowledge/domains/03 | 빈칸 비교표 | 하 | 구상 완료 (ideas/concepts/2026-11-17-sdm-compare-total-price.md) |
