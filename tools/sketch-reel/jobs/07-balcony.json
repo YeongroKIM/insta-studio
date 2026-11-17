@@ -1,0 +1,20 @@
+{
+  "before": "../work/07-balcony/before.png",
+  "after": "../work/07-balcony/after.png",
+  "captions": {
+    "before": "이런 텅 빈 베란다를",
+    "after": "이렇게 홈카페로 만들려면?",
+    "ask_title": "업체에 이렇게 요청하세요 👇"
+  },
+  "ask": [
+    "창가에 바 테이블과 선반으로<br>카페 코너를 만들어주세요",
+    "베란다 쪽에도 조명·콘센트를<br>추가해주세요",
+    "새시 틈 단열·환기 대책도<br>같이 봐주세요"
+  ],
+  "warn": "⚠️ 싱크대를 두려면 오수관이 있어야 해요 (우수관 연결 불가)",
+  "out": "../work/07-balcony/07-balcony.mp4",
+  "_prompts": {
+    "before": "A non-extended balcony of a Korean apartment: white PVC sliding windows along the length, grey ceramic tile floor, plain white walls, an empty corner, bright daylight. Architectural interior photography, photorealistic, editorial magazine style, eye-level, wide 24mm lens, 3/4 view, soft natural daylight, warm neutral palette (warm white, beige, light oak), clean and minimal, no people, no text, no logos, straight vertical lines, high detail. Any window view shows only soft hazy sky and trees, no buildings.",
+    "after": "Edit this photo. Keep everything else exactly identical — same camera angle, framing, perspective, lighting and all other objects. Only change: turn one end of the balcony into a cozy home cafe corner: a light-oak bar counter along the window with two stools, a floating shelf with mugs and a small coffee machine, a warm pendant light, and a potted olive tree."
+  }
+}

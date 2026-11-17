@@ -1,0 +1,21 @@
+{
+  "before": "../work/02-kitchen/before.png",
+  "after": "../work/02-kitchen/after.png",
+  "captions": {
+    "before": "이런 꽉 막힌 주방 상부장을",
+    "after": "이렇게 바꾸려면?",
+    "ask_title": "업체에 이렇게 요청하세요 👇"
+  },
+  "ask": [
+    "가운데 상부장 2칸을 떼고<br>오픈 선반 2줄로 바꿔주세요",
+    "남은 상부장 아래에<br>라인 조명을 넣어주세요",
+    "하부 조명 전원은<br>주방가구 설치 전에 준비해주세요",
+    "선반은 수전보다 충분히 높게 달아주세요"
+  ],
+  "warn": "⚠️ 수납이 확 줄어요 → 그릇 많은 집은 신중하게!",
+  "out": "../work/02-kitchen/02-kitchen.mp4",
+  "_prompts": {
+    "before": "A kitchen in a newly built Korean apartment: a full row of plain white glossy upper cabinets above the counter from wall to wall, white lower cabinets, a simple stainless sink and faucet, white subway-tile backsplash, light oak floor, a small window on the side. Architectural interior photography, photorealistic, editorial magazine style, eye-level, wide 24mm lens, 3/4 view, soft natural daylight, warm neutral palette (warm white, beige, light oak), clean and minimal, no people, no text, no logos, straight vertical lines, high detail. Any window view shows only soft hazy sky and trees, no buildings.",
+    "after": "Edit this photo. Keep everything else exactly identical — same camera angle, framing, perspective, lighting and all other objects. Only change: remove the two middle upper cabinets and replace them with two floating light-oak open shelves holding a few white bowls, cups and a small plant; add a warm-white LED line light under the remaining upper cabinets lighting the countertop."
+  }
+}

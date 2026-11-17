@@ -1,0 +1,20 @@
+{
+  "before": "../work/03-living/before.png",
+  "after": "../work/03-living/after.png",
+  "captions": {
+    "before": "이런 흔한 타일 아트월을",
+    "after": "이렇게 바꾸려면?",
+    "ask_title": "업체에 이렇게 요청하세요 👇"
+  },
+  "ask": [
+    "타일 아트월을 철거하고<br>우드 루버(템바보드) 벽으로 해주세요",
+    "TV 배선·콘센트 위치를<br>시공 전에 정해주세요",
+    "TV장은 바닥에서 띄워서 달아주세요"
+  ],
+  "warn": "⚠️ 기존 타일 철거비는 따로예요 → 견적에 포함됐는지 확인!",
+  "out": "../work/03-living/03-living.mp4",
+  "_prompts": {
+    "before": "A living room in a newly built Korean apartment: a TV feature wall covered in glossy beige large porcelain tiles (typical Korean 'art wall'), a low white TV console with a TV, light oak floor, a light grey fabric sofa partly visible in the foreground, sheer curtains on the right. Architectural interior photography, photorealistic, editorial magazine style, eye-level, wide 24mm lens, 3/4 view, soft natural daylight, warm neutral palette (warm white, beige, light oak), clean and minimal, no people, no text, no logos, straight vertical lines, high detail. Any window view shows only soft hazy sky and trees, no buildings.",
+    "after": "Edit this photo. Keep everything else exactly identical — same camera angle, framing, perspective, lighting and all other objects. Only change: replace the tile feature wall with a floor-to-ceiling vertical light-oak wood slat (louver) wall with thin dark gaps, mount the TV on it, and replace the console with a slim floating walnut TV console with a soft warm LED line underneath."
+  }
+}

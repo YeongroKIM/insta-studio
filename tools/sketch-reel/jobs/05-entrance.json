@@ -1,0 +1,20 @@
+{
+  "before": "../work/05-entrance/before.png",
+  "after": "../work/05-entrance/after.png",
+  "captions": {
+    "before": "이런 평범한 현관 신발장을",
+    "after": "이렇게 바꾸려면?",
+    "ask_title": "업체에 이렇게 요청하세요 👇"
+  },
+  "ask": [
+    "신발장을 바닥에서 띄워서<br>벽에 달아주세요",
+    "아래 빈 공간에 간접조명(센서등)을<br>넣어주세요",
+    "조명 전원·스위치 위치는<br>가구 제작 전에 정해주세요"
+  ],
+  "warn": "⚠️ 벽에 매다는 구조 → 석고보드 벽이면 보강 필요!",
+  "out": "../work/05-entrance/05-entrance.mp4",
+  "_prompts": {
+    "before": "The entrance hallway of a newly built Korean apartment seen from inside: a plain full-height white shoe cabinet standing on the floor along one wall, light grey porcelain tile floor at the entry step, white walls, the front door at the end. Architectural interior photography, photorealistic, editorial magazine style, eye-level, wide 24mm lens, 3/4 view, soft natural daylight, warm neutral palette (warm white, beige, light oak), clean and minimal, no people, no text, no logos, straight vertical lines, high detail. Any window view shows only soft hazy sky and trees, no buildings.",
+    "after": "Edit this photo. Keep everything else exactly identical — same camera angle, framing, perspective, lighting and all other objects. Only change: make the shoe cabinet a floating wall-hung cabinet raised about 25cm above the floor, with a warm-white LED strip hidden underneath softly lighting the floor and a pair of shoes below."
+  }
+}

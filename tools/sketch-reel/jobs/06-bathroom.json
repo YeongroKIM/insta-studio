@@ -1,0 +1,20 @@
+{
+  "before": "../work/06-bathroom/before.png",
+  "after": "../work/06-bathroom/after.png",
+  "captions": {
+    "before": "이런 튀어나온 욕실 거울장을",
+    "after": "이렇게 바꾸려면?",
+    "ask_title": "업체에 이렇게 요청하세요 👇"
+  },
+  "ask": [
+    "세면대 위 거울장을<br>벽 안으로 매립해주세요",
+    "거울 테두리·아래에<br>간접조명을 넣어주세요",
+    "욕실이라 방습형 조명으로 해주세요"
+  ],
+  "warn": "⚠️ 배관이 지나가는 벽이면 매립이 안 돼요 → 실측부터!",
+  "out": "../work/06-bathroom/06-bathroom.mp4",
+  "_prompts": {
+    "before": "A bathroom in a newly built Korean apartment: a white wall-mounted vanity sink, a plain surface-mounted mirror cabinet with visible frame above it, light grey large-format wall tiles, a simple ceiling light. Architectural interior photography, photorealistic, editorial magazine style, eye-level, wide 24mm lens, 3/4 view, soft natural daylight, warm neutral palette (warm white, beige, light oak), clean and minimal, no people, no text, no logos, straight vertical lines, high detail. Any window view shows only soft hazy sky and trees, no buildings.",
+    "after": "Edit this photo. Keep everything else exactly identical — same camera angle, framing, perspective, lighting and all other objects. Only change: replace the surface mirror cabinet with a flush recessed mirror cabinet built into the wall, with a soft warm LED glow around its edges and underneath, lighting the sink area."
+  }
+}

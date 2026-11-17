@@ -1,0 +1,20 @@
+{
+  "before": "../work/04-study/before.png",
+  "after": "../work/04-study/after.png",
+  "captions": {
+    "before": "이런 텅 빈 작은방을",
+    "after": "이렇게 서재로 만들려면?",
+    "ask_title": "업체에 이렇게 요청하세요 👇"
+  },
+  "ask": [
+    "한쪽 벽 전체를 책장으로 짜고<br>가운데에 책상 상판을 붙여주세요",
+    "콘센트·랜선·스탠드 전원 위치를<br>제작 전에 정해주세요",
+    "책 무게를 버티게 선반 두께·간격을<br>맞춰주세요"
+  ],
+  "warn": "⚠️ 전원 위치는 제작 후엔 못 바꿔요 → 먼저 정하기!",
+  "out": "../work/04-study/04-study.mp4",
+  "_prompts": {
+    "before": "An empty small bedroom in a newly built Korean apartment: plain white wallpaper on all walls, light oak floor, a window on the right wall with sheer curtain, flat white ceiling, completely empty room. Architectural interior photography, photorealistic, editorial magazine style, eye-level, wide 24mm lens, 3/4 view, soft natural daylight, warm neutral palette (warm white, beige, light oak), clean and minimal, no people, no text, no logos, straight vertical lines, high detail. Any window view shows only soft hazy sky and trees, no buildings.",
+    "after": "Edit this photo. Keep everything else exactly identical — same camera angle, framing, perspective, lighting and all other objects. Only change: build a full-wall custom bookshelf on the back wall in light oak and warm white, floor to ceiling, with an integrated built-in desk top in the middle section, a slim desk lamp, some books and a few objects on the shelves, and a simple chair at the desk."
+  }
+}
