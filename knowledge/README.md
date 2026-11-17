@@ -28,7 +28,7 @@
 | 7 | 한복·예복 | `domains/07-attire.md` | ⬜ |
 | 8 | 신혼여행 | `domains/08-honeymoon.md` | ⬜ |
 | 9 | 신혼집 (매매·전세·대출·지원제도) | `domains/09-home.md` | ⬜ |
-| 10 | 인테리어 (업체 구조·견적·공정·하자) | `domains/10-interior.md` | ⬜ |
+| 10 | 인테리어 (업체 구조·견적·공정·하자) | `domains/10-interior.md` | 🟡 작성 중 (2026-11-17, 출처 27 · 디자인 요소 15종 표) |
 | 11 | 혼수·가전·가구 | `domains/11-appliance.md` | ⬜ |
 | 12 | 행정 (혼인신고·세금·청약 혜택) | `domains/12-admin.md` | ⬜ |
 | 13 | 결혼 후 (축의금 정산·감사 인사) | `domains/13-after.md` | ⬜ |
