@@ -16,3 +16,8 @@ records/**/*.mp4
 records/**/*.pdf
 
 .DS_Store
+
+# 릴스 합성 산출물·소재 (클라우드 보관)
+tools/sketch-reel/**/*.mp4
+tools/sketch-reel/**/*_preview*.png
+tools/sketch-reel/work/

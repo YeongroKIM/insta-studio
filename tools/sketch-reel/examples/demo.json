@@ -1,0 +1,17 @@
+{
+  "before": "demo-before.svg",
+  "after": "demo-after.svg",
+  "area": [
+    0.21,
+    0.46,
+    0.57,
+    0.11
+  ],
+  "captions": {
+    "before": "평범한 안방 붙박이장",
+    "sketch": "가운데를 이렇게 파면",
+    "after": "니치 + 간접조명 ✨"
+  },
+  "info": "이걸 '니치'라고 해요<br>비용·주의점은 지식 DB 확인 후 기입",
+  "out": "demo.mp4"
+}

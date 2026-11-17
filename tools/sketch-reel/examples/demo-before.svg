@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+<rect width="1080" height="1920" fill="#F6F1EA"/><rect y="1560" width="1080" height="360" fill="#D9CDBD"/>
+<rect x="0" y="0" width="1080" height="380" fill="#FBF8F3"/><rect x="90" y="380" width="146" height="1180" fill="#EEE6DC" stroke="#CFC4B6" stroke-width="3"/><rect x="240" y="380" width="146" height="1180" fill="#EEE6DC" stroke="#CFC4B6" stroke-width="3"/><rect x="390" y="380" width="146" height="1180" fill="#EEE6DC" stroke="#CFC4B6" stroke-width="3"/><rect x="540" y="380" width="146" height="1180" fill="#EEE6DC" stroke="#CFC4B6" stroke-width="3"/><rect x="690" y="380" width="146" height="1180" fill="#EEE6DC" stroke="#CFC4B6" stroke-width="3"/><rect x="840" y="380" width="146" height="1180" fill="#EEE6DC" stroke="#CFC4B6" stroke-width="3"/>
+<rect x="930" y="300" width="150" height="1260" fill="#FFFFFF" opacity=".6"/>
+<text x="540" y="1760" font-size="34" text-anchor="middle" fill="#8B7F72" font-family="sans-serif">(데모용 자리표시 이미지)</text></svg>
