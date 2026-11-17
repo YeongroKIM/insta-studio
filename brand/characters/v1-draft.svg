@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <!-- 어쩌다 신부: 다람이(신부) + 곰곰이(신랑) 초안 v1 -->
+  <rect width="800" height="520" fill="#FAF7F2"/>
+  <ellipse cx="400" cy="462" rx="330" ry="18" fill="#E9DFD3"/>
+  <g stroke="#4A3428" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <!-- ===== 다람이 ===== -->
+    <!-- 꼬리 -->
+    <ellipse cx="345" cy="315" rx="62" ry="115" transform="rotate(22 345 315)" fill="#D98B5F"/>
+    <ellipse cx="350" cy="310" rx="32" ry="80" transform="rotate(22 350 310)" fill="#E8A87C" stroke="none"/>
+    <circle cx="378" cy="198" r="42" fill="#D98B5F"/>
+    <circle cx="372" cy="204" r="20" fill="#E8A87C" stroke="none"/>
+    <!-- 베일 (머리 뒤) -->
+    <path d="M232,190 C165,210 135,335 145,450 L222,450 C205,340 220,250 262,205 Z" fill="#FFFFFF" fill-opacity="0.95" stroke="#BFB3A6" stroke-width="3"/>
+    <path d="M200,240 C175,300 168,370 175,445 M225,225 C205,290 198,370 200,445" fill="none" stroke="#DDD3C8" stroke-width="2.5"/>
+    <!-- 몸 -->
+    <ellipse cx="262" cy="378" rx="68" ry="74" fill="#D98B5F"/>
+    <ellipse cx="262" cy="392" rx="40" ry="48" fill="#F5E1C8" stroke="none"/>
+    <!-- 발 -->
+    <ellipse cx="228" cy="450" rx="24" ry="12" fill="#C47448"/>
+    <ellipse cx="296" cy="450" rx="24" ry="12" fill="#C47448"/>
+    <!-- 귀 -->
+    <ellipse cx="208" cy="192" rx="17" ry="27" transform="rotate(-15 208 192)" fill="#D98B5F"/>
+    <ellipse cx="316" cy="192" rx="17" ry="27" transform="rotate(15 316 192)" fill="#D98B5F"/>
+    <ellipse cx="209" cy="196" rx="8" ry="15" transform="rotate(-15 209 196)" fill="#F2A7A0" stroke="none"/>
+    <ellipse cx="315" cy="196" rx="8" ry="15" transform="rotate(15 315 196)" fill="#F2A7A0" stroke="none"/>
+    <!-- 머리 -->
+    <circle cx="262" cy="258" r="74" fill="#D98B5F"/>
+    <ellipse cx="262" cy="286" rx="47" ry="36" fill="#F5E1C8" stroke="none"/>
+    <!-- 화관 -->
+    <circle cx="236" cy="190" r="10" fill="#FFFFFF"/>
+    <circle cx="262" cy="184" r="11" fill="#F2C4BE"/>
+    <circle cx="288" cy="190" r="10" fill="#FFFFFF"/>
+    <!-- 얼굴 -->
+    <circle cx="235" cy="258" r="9" fill="#2F2A27" stroke="none"/>
+    <circle cx="289" cy="258" r="9" fill="#2F2A27" stroke="none"/>
+    <circle cx="238" cy="255" r="3" fill="#FFFFFF" stroke="none"/>
+    <circle cx="292" cy="255" r="3" fill="#FFFFFF" stroke="none"/>
+    <ellipse cx="262" cy="278" rx="7" ry="5" fill="#2F2A27" stroke="none"/>
+    <path d="M252,290 Q257,297 262,290 Q267,297 272,290" fill="none" stroke-width="3"/>
+    <ellipse cx="216" cy="286" rx="13" ry="8" fill="#F2A7A0" fill-opacity="0.75" stroke="none"/>
+    <ellipse cx="308" cy="286" rx="13" ry="8" fill="#F2A7A0" fill-opacity="0.75" stroke="none"/>
+    <!-- 도토리 + 손 -->
+    <ellipse cx="262" cy="362" rx="20" ry="23" fill="#B07A4F"/>
+    <path d="M240,350 Q262,326 284,350 Z" fill="#6E4A33"/>
+    <line x1="262" y1="336" x2="262" y2="326" stroke-width="4"/>
+    <ellipse cx="236" cy="365" rx="12" ry="10" fill="#D98B5F"/>
+    <ellipse cx="288" cy="365" rx="12" ry="10" fill="#D98B5F"/>
+
+    <!-- ===== 곰곰이 ===== -->
+    <!-- 몸 -->
+    <ellipse cx="560" cy="372" rx="86" ry="84" fill="#9C6B4E"/>
+    <ellipse cx="560" cy="390" rx="50" ry="54" fill="#E9D3B8" stroke="none"/>
+    <!-- 발 -->
+    <ellipse cx="518" cy="452" rx="30" ry="13" fill="#8A5A3C"/>
+    <ellipse cx="602" cy="452" rx="30" ry="13" fill="#8A5A3C"/>
+    <!-- 팔 -->
+    <ellipse cx="482" cy="372" rx="18" ry="30" transform="rotate(20 482 372)" fill="#9C6B4E"/>
+    <ellipse cx="638" cy="372" rx="18" ry="30" transform="rotate(-20 638 372)" fill="#9C6B4E"/>
+    <!-- 귀 -->
+    <circle cx="492" cy="172" r="26" fill="#9C6B4E"/>
+    <circle cx="628" cy="172" r="26" fill="#9C6B4E"/>
+    <circle cx="492" cy="172" r="13" fill="#E9D3B8" stroke="none"/>
+    <circle cx="628" cy="172" r="13" fill="#E9D3B8" stroke="none"/>
+    <!-- 머리 -->
+    <circle cx="560" cy="242" r="84" fill="#9C6B4E"/>
+    <ellipse cx="560" cy="272" rx="38" ry="29" fill="#E9D3B8"/>
+    <!-- 얼굴 -->
+    <circle cx="527" cy="236" r="9" fill="#2F2A27" stroke="none"/>
+    <circle cx="593" cy="236" r="9" fill="#2F2A27" stroke="none"/>
+    <circle cx="530" cy="233" r="3" fill="#FFFFFF" stroke="none"/>
+    <circle cx="596" cy="233" r="3" fill="#FFFFFF" stroke="none"/>
+    <ellipse cx="560" cy="261" rx="12" ry="8" fill="#2F2A27" stroke="none"/>
+    <path d="M560,269 L560,278 M548,282 Q560,290 572,282" fill="none" stroke-width="3"/>
+    <ellipse cx="510" cy="268" rx="13" ry="8" fill="#F2A7A0" fill-opacity="0.6" stroke="none"/>
+    <ellipse cx="610" cy="268" rx="13" ry="8" fill="#F2A7A0" fill-opacity="0.6" stroke="none"/>
+    <!-- 나비넥타이 -->
+    <path d="M560,326 L530,312 L530,342 Z" fill="#2F2A27"/>
+    <path d="M560,326 L590,312 L590,342 Z" fill="#2F2A27"/>
+    <circle cx="560" cy="326" r="7" fill="#2F2A27"/>
+  </g>
+  <!-- 하트 -->
+  <path d="M436,132 C436,120 453,118 456,130 C459,118 476,120 476,132 C476,146 456,156 456,160 C456,156 436,146 436,132 Z" fill="#F2A7A0" stroke="#4A3428" stroke-width="3"/>
+</svg>
