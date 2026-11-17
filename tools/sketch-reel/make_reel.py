@@ -33,10 +33,10 @@ def build_html(cfg, base: pathlib.Path) -> str:
     c = cfg["captions"]
     info = cfg.get("info", "")
     return f"""<!doctype html><html><head><meta charset="utf-8">
-<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
 <style>
 *{{margin:0;padding:0;box-sizing:border-box}}
-body{{width:{W}px;height:{H}px;overflow:hidden;background:#000;font-family:'Gaegu',cursive}}
+body{{width:{W}px;height:{H}px;overflow:hidden;background:#000;font-family:'Pretendard',sans-serif;letter-spacing:-0.5px}}
 .layer{{position:absolute;inset:0;background-size:cover;background-position:center;transform-origin:50% 50%}}
 #cap{{position:absolute;top:150px;width:100%;text-align:center;font-size:76px;color:#fff;
   text-shadow:0 3px 14px rgba(0,0,0,.45);letter-spacing:2px;padding:0 60px;line-height:1.25}}
@@ -87,10 +87,10 @@ def build_stages_html(cfg, base: pathlib.Path) -> tuple[str, float]:
     caps = json.dumps([s["caption"] for s in st], ensure_ascii=False)
     info = cfg.get("info", "")
     html = f"""<!doctype html><html><head><meta charset="utf-8">
-<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
 <style>
 *{{margin:0;padding:0;box-sizing:border-box}}
-body{{width:{W}px;height:{H}px;overflow:hidden;background:#000;font-family:'Gaegu',cursive}}
+body{{width:{W}px;height:{H}px;overflow:hidden;background:#000;font-family:'Pretendard',sans-serif;letter-spacing:-0.5px}}
 #stage{{position:absolute;inset:0;transform-origin:50% 55%}}
 .layer{{position:absolute;inset:0;background-size:cover;background-position:center}}
 #shade{{position:absolute;left:0;right:0;top:0;height:520px;background:linear-gradient(rgba(40,30,22,.42),rgba(40,30,22,0))}}
@@ -126,25 +126,26 @@ def build_ask_html(cfg, base: pathlib.Path) -> tuple[str, float]:
     items = "".join(f'<li id="i{i}">{x}</li>' for i, x in enumerate(lines))
     c = cfg["captions"]
     html = f"""<!doctype html><html><head><meta charset="utf-8">
-<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
 <style>
 *{{margin:0;padding:0;box-sizing:border-box}}
-body{{width:{W}px;height:{H}px;overflow:hidden;background:#000;font-family:'Gaegu',cursive}}
+body{{width:{W}px;height:{H}px;overflow:hidden;background:#000;font-family:'Pretendard',sans-serif;letter-spacing:-0.5px}}
 .layer{{position:absolute;inset:0;background-size:cover;background-position:center;transform-origin:50% 50%}}
 #after{{clip-path:inset(0 100% 0 0)}}
 #bar{{position:absolute;top:0;bottom:0;width:6px;background:rgba(255,255,255,.9);box-shadow:0 0 18px rgba(0,0,0,.25);opacity:0}}
 #shade{{position:absolute;left:0;right:0;top:0;height:520px;background:linear-gradient(rgba(40,30,22,.42),rgba(40,30,22,0))}}
 #dim{{position:absolute;inset:0;background:rgba(250,247,242,.0)}}
-#cap{{position:absolute;top:150px;width:100%;text-align:center;font-size:78px;color:#fff;text-shadow:0 3px 14px rgba(0,0,0,.45);padding:0 60px;line-height:1.2}}
-#tag{{position:absolute;top:0;left:0;right:0;text-align:center;font-family:sans-serif;font-size:30px;letter-spacing:3px;color:rgba(255,255,255,.9);padding-top:96px}}
-#panel{{position:absolute;left:56px;right:56px;top:470px;background:rgba(250,247,242,.95);border-radius:40px;padding:52px 50px 44px;opacity:0;box-shadow:0 14px 50px rgba(0,0,0,.2)}}
-#panel h2{{font-size:66px;color:#2F2A27;margin-bottom:26px}}
+#cap{{position:absolute;top:150px;width:100%;text-align:center;font-size:92px;font-weight:700;color:#fff;text-shadow:0 3px 18px rgba(0,0,0,.4);padding:0 60px;line-height:1.2}}
+#tag{{position:absolute;top:0;left:0;right:0;text-align:center;font-size:34px;font-weight:600;letter-spacing:6px;color:rgba(255,255,255,.9);padding-top:92px}}
+#panel{{position:absolute;left:48px;right:48px;top:430px;background:rgba(250,247,242,.95);border-radius:40px;padding:52px 50px 44px;opacity:0;box-shadow:0 14px 50px rgba(0,0,0,.2)}}
+#panel h2{{font-size:74px;font-weight:800;color:#2F2A27;margin-bottom:28px;letter-spacing:-1.5px}}
 #panel ul{{list-style:none}}
-#panel li{{font-size:50px;color:#2F2A27;line-height:1.3;padding:14px 0 14px 66px;position:relative;opacity:0;border-top:2px dashed #E9DFD3}}
-#panel li:before{{content:'☐';position:absolute;left:0;top:12px;font-size:50px;color:#8A5A3C}}
-#panel li.on:before{{content:'☑'}}
-#panel .warn{{margin-top:22px;font-size:46px;color:#9A4B2F;opacity:0}}
-#cta{{position:absolute;left:0;right:0;bottom:230px;text-align:center;font-size:58px;color:#fff;text-shadow:0 3px 14px rgba(0,0,0,.5);opacity:0}}
+#panel li{{font-size:54px;font-weight:600;color:#2F2A27;line-height:1.32;padding:20px 0 20px 80px;position:relative;opacity:0;border-top:2px solid #E9DFD3;letter-spacing:-1px}}
+#panel li:before{{content:'';position:absolute;left:0;top:30px;width:46px;height:46px;border:4px solid #8A5A3C;border-radius:10px;box-sizing:border-box}}
+#panel li.on:before{{background:#8A5A3C}}
+#panel li.on:after{{content:'';position:absolute;left:15px;top:37px;width:12px;height:24px;border:solid #fff;border-width:0 6px 6px 0;transform:rotate(45deg)}}
+#panel .warn{{margin-top:24px;font-size:50px;font-weight:700;color:#9A4B2F;opacity:0;letter-spacing:-1px;line-height:1.3}}
+#cta{{position:absolute;left:0;right:0;bottom:230px;text-align:center;font-size:56px;font-weight:700;color:#fff;text-shadow:0 3px 14px rgba(0,0,0,.5);opacity:0}}
 #ai{{position:absolute;right:36px;bottom:120px;font-family:sans-serif;font-size:28px;color:rgba(255,255,255,.85);background:rgba(0,0,0,.28);padding:8px 16px;border-radius:12px}}
 </style></head><body>
 <div class="layer" id="before" style="background-image:url('{img(cfg['before'])}')"></div>
@@ -214,7 +215,7 @@ def main():
             print("preview →", out.parent)
             return
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-framerate", str(FPS), "-i", str(frames / "f_%04d.png"),
-                        "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "18", "-movflags", "+faststart", str(out)], check=True)
+                        "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "16", "-preset", "slow", "-movflags", "+faststart", str(out)], check=True)
         print("reel →", out)
 
 if __name__ == "__main__":
