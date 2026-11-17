@@ -178,6 +178,8 @@ FONT_CSS = """
 body{word-break:keep-all;overflow-wrap:break-word}
 #cap,#tag,#step,#panel h2{font-family:'Gowun Batang',serif!important;font-weight:700!important;text-wrap:balance;letter-spacing:-1px}
 #panel li,#card,#cta,#ai{font-family:'Gowun Dodum',sans-serif!important;font-weight:400!important;text-wrap:balance;letter-spacing:-0.5px}
+#panel h2,#panel .warn,#cap,#tag,#cta{text-align:center!important}
+#panel li{text-align:left!important}
 #panel .warn{font-family:'Nanum Pen Script',cursive!important;font-weight:400!important;font-size:70px!important;line-height:1.1!important;text-wrap:balance}
 """
 
