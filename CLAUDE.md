@@ -26,6 +26,7 @@
 | `checklists/` | 신상 비노출 검수표, 게시 전 체크리스트 |
 | `calendar/` | 주간 작업 계획 (`YYYY-Www.md`) |
 | `ideas/backlog.md` | 아이디어 목록 |
+| `formats/` | 시그니처 포맷 설계 (예: `sketch-reel.md` 펜 한 줄 인테리어 릴스) |
 | `ideas/concepts/` | 콘텐츠 기획자가 지식 DB로 만든 게시물 구상 (매일 2~3개) |
 | `posts/` | 게시물별 패키지 (`YYYY-MM-DD-slug.md`, 템플릿 `_template.md`) |
 | `reports/` | 주간 KPI 리포트 (`YYYY-Www.md`, 템플릿 `_template.md`) |
